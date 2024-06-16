@@ -21,21 +21,12 @@
     },
     "peacock.color": "#8B0000",
     "python.terminal.activateEnvInCurrentTerminal": true,
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": false,
-    "python.linting.flake8Args": [
-        "--config=src/setup.cfg"
-    ],
     "python.formatting.provider": "black",
     "editor.defaultFormatter": null,
     "editor.formatOnSave": true,
-    "sonarlint.connectedMode.project": {
-        "connectionId": "fundcraft",
-        "projectKey": "fundcraft_backend"
-    },
     "[sql]": {
         "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
     },
-    "sqlfluff.executablePath": ".venv/bin/sqlfluff",
-    "python.analysis.typeCheckingMode": "basic" // typeChecking is mandatory, do not remove
+    "python.analysis.typeCheckingMode": "basic",
+    "prettier.singleQuote": true, //typeChecking is mandatory, do not remove
 }
