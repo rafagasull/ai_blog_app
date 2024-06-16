@@ -1,0 +1,38 @@
+# Project specific
+shared/
+src/app.ini
+\!*
+
+# Custom Debugging
+src/debugging_scripts/*
+!src/debugging_scripts/setup.py
+logging.dev.local.yaml
+
+# Django
+*.log
+_pycache_/
+
+# MacOS
+*.DS_Store
+
+# Environment files
+env-local
+
+# Virtual environments
+.venv
+
+# Visual Studio Code
+.history
+
+# Pytest
+.coverage*
+coverage.xml
+
+# Test
+db.sqlite
+.coverage
+src/db.sqlite
+src/htmlcov/
+src/by_client/*.csv
+src/by_client/qa/*
+src/urls.txt
