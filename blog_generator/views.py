@@ -1,13 +1,40 @@
+import json
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.http import JsonResponse
 from django.shortcuts import redirect, render
+from django.views.decorators.csrf import csrf_exempt
 
 
 # Create your views here.
 @login_required
 def index(request):
     return render(request, 'index.html')
+
+
+@csrf_exempt
+def generate_blog(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            youtube_link = data['link']
+            return JsonResponse({'content': youtube_link}, status=200)
+        except (KeyError, json.JSONDecodeError):
+            return JsonResponse({'error': 'Invalid data sent'}, status=400)
+
+        # get youtube title
+
+        # get transcript
+
+        # use OpenAI to generate the blog
+
+        # save blog article to database
+
+        # return blog article as a response
+    else:
+        return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 
 def user_login(request):
