@@ -96,6 +96,19 @@ def _generate_blog_from_transcription(transcription: str):
     return completion.choices[0].message.content
 
 
+def blog_list(request):
+    blog_articles = BlogPost.objects.filter(user=request.user).order_by('-created_at')
+    return render(request, 'all-blogs.html', {'blog_articles': blog_articles})
+
+
+def blog_details(request, uuid):
+    blog_article_detail = BlogPost.objects.get(uuid=uuid)
+    if request.user == blog_article_detail.user:
+        return render(request, 'blog-details.html', {'blog_article_detail': blog_article_detail})
+    else:
+        return redirect('/')
+
+
 def user_login(request):
     if request.method == 'POST':
         username = request.POST['username']

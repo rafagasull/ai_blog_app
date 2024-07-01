@@ -1,6 +1,7 @@
 annotated-types==0.7.0
 anyio==4.4.0
 asgiref==3.8.1
+assemblyai==0.28.1
 certifi==2024.6.2
 cfgv==3.4.0
 distlib==0.3.8
@@ -12,6 +13,7 @@ httpcore==1.0.5
 httpx==0.27.0
 identify==2.5.36
 idna==3.7
+lxml==5.2.2
 nodeenv==1.9.1
 openai==1.35.7
 platformdirs==4.2.2
@@ -19,8 +21,10 @@ pre-commit==3.7.1
 psycopg2-binary==2.9.9
 pydantic==2.8.0
 pydantic_core==2.20.0
+python-docx==1.1.2
 pytube==15.0.0
 PyYAML==6.0.1
+shortuuid==1.0.13
 sniffio==1.3.1
 sqlparse==0.5.0
 tqdm==4.66.4
