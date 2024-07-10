@@ -141,3 +141,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_URL = 'login'
 
 ALLOWED_HOSTS = ['localhost', 'aiblogapp-production.up.railway.app']
+
+CSRF_TRUSTED_ORIGINS = ['https://aiblogapp-production.up.railway.app']
