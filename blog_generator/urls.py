@@ -11,3 +11,4 @@ urlpatterns = [
     path('blog-list', views.blog_list, name='blog-list'),
     path('blog-details/<str:uuid>', views.blog_details, name='blog-details'),
 ]
+# Note
