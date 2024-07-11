@@ -143,3 +143,6 @@ LOGIN_URL = 'login'
 ALLOWED_HOSTS = ['localhost', 'aiblogapp-production.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://aiblogapp-production.up.railway.app']
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
